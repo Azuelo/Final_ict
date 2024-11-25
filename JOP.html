@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jop Fitness</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="animated-background"></div>
+      
+    <header class="navbar">
+        <h1>Jop Fitness Center</h1>
+        <ul>
+          <li><a href="JOP.html">Home</a></li>
+          <li><a href="MembershipPlans.html">Membership Plans</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Friend Company</a></li>
+        </ul>
+        <div class="search-bar">
+          <input type="text" placeholder="Search" aria-label="Search">
+        </div>
+    </header>
+    <div class="intro">
+        <h2>Fitness Pro Guide</h2>
+        <p><strong>Fitness Pro Guide</strong> is a complete resource for anyone looking to improve their fitness journey...</p>
+    </div>
+    <div class="carousel">
+        <input type="radio" name="carousel" id="slide1">
+        <input type="radio" name="carousel" id="slide2">
+        <input type="radio" name="carousel" id="slide3">
+    
+        <div class="carousel-slides">
+            <div class="carousel-slide">
+                <img src="images/Logo 1 (Personal Logo).png" alt="Slide 1">
+                <h2>Sponsor By Geoff Company</h2>
+                <p>Your Fitness Partner</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/Logo 2 (Formal Logo).png" alt="Slide 2">
+                <h2>Sponsor By Haki Fitness</h2>
+                <p>Strong Together</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/Logo 3 (Informal Logo).png" alt="Slide 3">
+                <h2>Sponsor By Maxxi Boys</h2>
+                <p>Maximize Your Potential</p>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <label for="slide1" class="control" aria-label="Slide 1">1</label>
+            <label for="slide2" class="control" aria-label="Slide 2">2</label>
+            <label for="slide3" class="control" aria-label="Slide 3">3</label>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 3;
+      
+        function showNextSlide() {
+          document.getElementById(`slide${currentSlide}`).checked = true;
+          currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
+        }
+      
+        setInterval(showNextSlide, 3000);   
+    </script>
+      
+</body>
+</html>
